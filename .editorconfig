@@ -1,0 +1,73 @@
+# .editorconfig
+# https://editorconfig.org
+
+root = true
+
+# ─────────────────────────────────────────────────────────────
+# Defaults para todo el proyecto
+# ─────────────────────────────────────────────────────────────
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# ─────────────────────────────────────────────────────────────
+# Markdown: preservar saltos de línea y espacios finales
+# (importante para tablas y saltos con doble espacio)
+# ─────────────────────────────────────────────────────────────
+[*.md]
+trim_trailing_whitespace = false
+
+# ─────────────────────────────────────────────────────────────
+# Docker Compose: indentación de 1 espacio (coincide con
+# "[dockercompose]" → "editor.tabSize": 1 en tu settings.json)
+# ─────────────────────────────────────────────────────────────
+[docker-compose*.yml]
+indent_size = 1
+
+[docker-compose*.yaml]
+indent_size = 1
+
+# ─────────────────────────────────────────────────────────────
+# YAML en general: 2 espacios, sin tabs
+# ─────────────────────────────────────────────────────────────
+[*.{yml,yaml}]
+indent_size = 2
+
+# ─────────────────────────────────────────────────────────────
+# Makefiles: tabs obligatorios
+# ─────────────────────────────────────────────────────────────
+[Makefile]
+indent_style = tab
+
+[*.mk]
+indent_style = tab
+
+# ─────────────────────────────────────────────────────────────
+# Archivos que NO deben tocarse (lockfiles, generados, etc.)
+# ─────────────────────────────────────────────────────────────
+[{package-lock.json,pnpm-lock.yaml,yarn.lock}]
+insert_final_newline = false
+
+[*.min.{js,css}]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# ─────────────────────────────────────────────────────────────
+# Windows: scripts de PowerShell / batch
+# ─────────────────────────────────────────────────────────────
+[*.{ps1,psm1,psd1}]
+end_of_line = crlf
+
+[*.{bat,cmd}]
+end_of_line = crlf
+
+# ─────────────────────────────────────────────────────────────
+# Shell scripts
+# ─────────────────────────────────────────────────────────────
+[*.sh]
+indent_size = 2
+end_of_line = lf

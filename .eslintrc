@@ -1,0 +1,13 @@
+// npm i -D eslint eslint-config-prettier
+// .eslintrc.json
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "env": {
+    "es2022": true,
+    "node": true,
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+  },
+}

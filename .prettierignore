@@ -1,0 +1,25 @@
+# .prettierignore
+node_modules
+dist
+build
+out
+coverage
+.next
+.nuxt
+.turbo
+.cache
+
+# Lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Generados
+*.min.js
+*.min.css
+*.bundle.js
+*.d.ts
+
+# Configs que no querés tocar
+.github/
+.vscode/
